@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePic"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user"
+            android:layout_marginStart="10dp"
+            />
+        <LinearLayout
+            android:id="@+id/wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/profilePic"
+            android:layout_toStartOf="@id/unseenMessage"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            >
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                />
+            <TextView
+                android:id="@+id/lastestMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is text message"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/unseenMessage"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_back_1000_blue"
+            android:layout_marginHorizontal="10dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
