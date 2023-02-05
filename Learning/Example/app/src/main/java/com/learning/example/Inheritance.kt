@@ -5,6 +5,7 @@ open class Person(age: Int, name: String) {
         println("My name is $name.")
         println("My age is $age")
     }
+    constructor(age: Int, name: String, abc: Int) : this(age, name)
 }
 
 open class Teacher(age: Int, name: String, open var subject: String): Person(age, name) {

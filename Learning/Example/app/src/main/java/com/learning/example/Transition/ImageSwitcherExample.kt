@@ -24,6 +24,7 @@ class ImageSwitcherExample : AppCompatActivity() {
             override fun makeView(): View {
                 var imageView = ImageView(this@ImageSwitcherExample)
                 imageView.scaleType = ImageView.ScaleType.FIT_CENTER
+
                 return imageView
             }
         })
