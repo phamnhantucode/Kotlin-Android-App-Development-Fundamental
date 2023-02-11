@@ -1,17 +1,19 @@
 package com.example.chatapp.messages
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chatapp.MainActivity
 import com.example.chatapp.R
+import com.example.chatapp.chat.Chat
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
-import org.w3c.dom.Text
-import java.util.zip.Inflater
 
 class MessagesAdapter : RecyclerView.Adapter<MessagesAdapter.MyViewHolder> {
     val context: Context
@@ -27,12 +29,14 @@ class MessagesAdapter : RecyclerView.Adapter<MessagesAdapter.MyViewHolder> {
         val username: TextView
         val lastestMessage: TextView
         val usseenMessage: ImageView
+        val rootLayout: RelativeLayout
 
         init {
             profilePic = itemView.findViewById(R.id.profilePic)
             username = itemView.findViewById(R.id.username)
             lastestMessage = itemView.findViewById(R.id.lastestMessage)
             usseenMessage = itemView.findViewById(R.id.unseenMessage)
+            rootLayout = itemView.findViewById(R.id.rootLayout)
         }
 
     }
@@ -51,6 +55,13 @@ class MessagesAdapter : RecyclerView.Adapter<MessagesAdapter.MyViewHolder> {
             holder.usseenMessage.visibility = View.GONE
         } else holder.usseenMessage.visibility = View.VISIBLE
 
+        holder.rootLayout.setOnClickListener {
+            var intent = Intent(context, Chat::class.java)
+            intent.putExtra("user", (context as MainActivity).key)
+            intent.putExtra("partner", messagesList.id)
+            intent.putExtra("key_chat", messagesList.keyChat)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

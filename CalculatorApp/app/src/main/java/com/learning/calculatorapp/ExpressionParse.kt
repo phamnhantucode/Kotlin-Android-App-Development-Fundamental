@@ -31,6 +31,8 @@ class ExpressionParse {
                 } else {
                     if (ExpressionParse.symbols.containsKey(text[i].toString())) {
                         symbols.append(text[i])
+                        math.push(symbols.toString())
+                        symbols.clear()
                         if (number.length > 0) {
                             value.push(getValue(number.toString()))
                             number.clear()
@@ -45,6 +47,10 @@ class ExpressionParse {
                             number.clear()
                         }
                         symbols.append(text[i])
+                        if (text[i].equals(')')) {
+                            math.push(symbols.toString())
+                            symbols.clear()
+                        }
                         evaluate(false)
                     }
                 }
@@ -81,7 +87,7 @@ class ExpressionParse {
                 }
                 math.size == 1 && value.size == 2 && isEnded ->
                         value.push(calculator(value.pop(), value.pop(), math.pop()))
-                math.size > 1 && !isEnded-> {
+                math.size >=1 && !isEnded -> {
                     var mathSymbol = math.pop()
                     if (mathSymbol.equals(")")) {
                         while (!math.isEmpty() && !isOpenBrace(math.peek())) {
@@ -128,6 +134,7 @@ class ExpressionParse {
                 "cos(" -> result = if (unit.equals("R")) Math.cos(a) else Math.cos(Math.toRadians(a))
                 "tan(" -> result = if (unit.equals("R")) Math.tan(a) else Math.tan(Math.toRadians(a))
                 "abs(" -> result = Math.abs(a)
+                "log(" -> result = Math.log(a)
                 "√(" -> result = Math.sqrt(a)
             }
             return result

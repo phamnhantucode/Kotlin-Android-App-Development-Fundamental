@@ -16,7 +16,6 @@
         android:weightSum="2"
         android:orientation="vertical"
         >
-
         <TextView
             android:id="@+id/resultHolder"
             android:layout_width="match_parent"
@@ -24,8 +23,8 @@
             android:layout_weight="1"
             android:gravity="center_vertical|end"
             android:textColor="@color/text_hint_color"
-            android:textSize="30sp" />
-
+            android:textSize="30sp"
+            />
         <TextView
             android:id="@+id/expression"
             android:layout_width="match_parent"
@@ -45,7 +44,6 @@
         android:layout_height="wrap_content"
         android:paddingHorizontal="10dp"
         >
-
         <TextView
             android:id="@+id/unitBtn"
             android:layout_width="wrap_content"
@@ -57,7 +55,6 @@
             android:text="Rad"
             android:textSize="17dp"
             android:textStyle="bold" />
-
         <ImageButton
             android:id="@+id/switchOrientationBtn"
             android:layout_width="32dp"
@@ -65,7 +62,6 @@
             android:src="@drawable/ic_baseline_calculate_24"
             android:background="#00FFFFFF"
             />
-
         <ImageButton
             android:id="@+id/backspaceBtn"
             android:layout_width="32dp"

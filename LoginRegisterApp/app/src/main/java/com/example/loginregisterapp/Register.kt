@@ -41,7 +41,7 @@ class Register : AppCompatActivity() {
                     databaseReference.child("user").addListenerForSingleValueEvent(object: ValueEventListener {
                         override fun onDataChange(snapshot: DataSnapshot) {
                             //check if account exits
-                            if (snapshot.child("username").hasChild(usernameInput.text.toString())) {
+                            if (snapshot.children.find { it.child("username").value.toString().equals(usernameInput.text.toString())} != null ){
                                 Toast.makeText(this@Register, "Account exits", Toast.LENGTH_LONG).show()
                             }
                             else {

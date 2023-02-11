@@ -17,6 +17,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+    }
+
+    private void init() {
         final TextView resultHolder = findViewById(R.id.resultHolder);
         final TextView expression = findViewById(R.id.expression);
 
@@ -246,7 +252,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     private boolean containSign(String textExpression) {

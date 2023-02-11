@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 messagesLists.clear()
                 for (data in snapshot.child("user").children) {
                     if (!data.key.toString().equals(key)) {
-                        messagesLists.add(MessagesList(data.child("username").value.toString(), "", data.child("profile_pic").value.toString(), 0))
+                        messagesLists.add(MessagesList(data.child("username").value.toString(), "", data.child("profile_pic").value.toString(), 0, data.key.toString()))
                     }
                 }
                 recyclerView!!.adapter = MessagesAdapter(this@MainActivity, messagesLists)

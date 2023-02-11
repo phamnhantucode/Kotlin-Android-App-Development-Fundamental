@@ -41,6 +41,13 @@ class MainActivity : AppCompatActivity() {
         expression = findViewById(R.id.expression)
         resultHolder = findViewById(R.id.resultHolder)
         findViewById<ImageButton>(R.id.backspaceBtn)?.setOnClickListener {
+            numOfOpenBracket = expression!!.text.count {
+                it.equals('(')
+            }
+            numOfCloseBracket = expression!!.text.count {
+                it.equals(')')
+            }
+
             when {
                 expression!!.text.length ==  1 -> {
                     clearExpression()
@@ -192,11 +199,11 @@ class MainActivity : AppCompatActivity() {
                         numOfOpenBracket++
                         expression!!.text = "("
                     }
-                    isSymbol(expression!!.text[expression!!.text.length-1].toString()) && !(expression!!.text[expression!!.text.length-1].equals('^')) -> {
+                    isSymbol(expression!!.text[expression!!.text.length-1].toString()) -> {
                         numOfOpenBracket++
                         expression!!.text = expression!!.text.toString() + "("
                     }
-                    numOfCloseBracket < numOfOpenBracket && isNumber(expression!!.text[expression!!.text.length-1]) -> {
+                    numOfCloseBracket < numOfOpenBracket || isNumber(expression!!.text[expression!!.text.length-1]) -> {
                         expression!!.text = expression!!.text.toString() + ")"
                         numOfCloseBracket++
                     }
@@ -276,7 +283,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun isMathSymbols(c: Char): Boolean {
-        return c.equals('+') || c.equals('-') || c.equals("÷") || c.equals("×") || c.equals("%") || c.equals("^")
+        return c.equals('+') || c.equals('-') || c.equals('÷') || c.equals('×') || c.equals('%') || c.equals('^')
     }
 
     fun isSymbol(string: String): Boolean {
