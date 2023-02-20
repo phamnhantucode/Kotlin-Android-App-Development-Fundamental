@@ -25,4 +25,6 @@ object Constant {
     const val NOTIFICATION_CHANEL_NAME = "Tracking"
     const val NOTIFICATION_ID = 1
 
+    const val TIMER_UPDATE_INTERVAL = 50L
+
 }

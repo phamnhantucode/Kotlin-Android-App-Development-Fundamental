@@ -19,6 +19,7 @@ import com.learning.runningapp.Polylines
 import com.learning.runningapp.R
 import com.learning.runningapp.databinding.FragmentTrackingBinding
 import com.learning.runningapp.other.Constant
+import com.learning.runningapp.other.TrackingUtility
 import com.learning.runningapp.services.TrackingService
 import com.learning.runningapp.ui.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -46,6 +47,7 @@ class TrackingFragment : Fragment() {
     private var map: GoogleMap? = null
     val binding get() = _binding!!
 
+    private var currentTimeInMillis = 0L
     private fun updateTracking(isTracking: Boolean) {
         this.isTracking = isTracking
         if (isTracking) {
@@ -78,6 +80,11 @@ class TrackingFragment : Fragment() {
 
         TrackingService.isTracking.observe(viewLifecycleOwner, {
             updateTracking(it)
+        })
+
+        TrackingService.timeRunInMillis.observe(viewLifecycleOwner, {
+            currentTimeInMillis = it
+            binding.tvTimer.text = TrackingUtility.getFormattedStopWatchTime(currentTimeInMillis, false)
         })
     }
 
