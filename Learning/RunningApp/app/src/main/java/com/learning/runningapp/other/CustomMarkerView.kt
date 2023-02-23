@@ -22,6 +22,7 @@ class CustomMarkerView(
         return MPPointF(-width / 2f, -height.toFloat())
     }
 
+
     override fun refreshContent(e: Entry?, highlight: Highlight?) {
         super.refreshContent(e, highlight)
         if (e == null) {

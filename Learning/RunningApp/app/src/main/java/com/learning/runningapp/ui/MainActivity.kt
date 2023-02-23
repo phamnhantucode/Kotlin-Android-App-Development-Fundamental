@@ -30,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.setupWithNavController(navController)
+        bottomNavigationView.setOnItemReselectedListener {
+            //
+        }
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when(destination.id) {
                 R.id.settingsFragment, R.id.statisticsFragment, R.id.runFragment -> bottomNavigationView.visibility = View.VISIBLE

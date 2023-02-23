@@ -35,6 +35,7 @@ import com.learning.runningapp.ui.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.scopes.ViewModelScoped
+import kotlinx.android.synthetic.main.fragment_tracking.*
 import java.util.Calendar
 import java.util.Timer
 import kotlin.math.round
@@ -50,7 +51,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 
-
+const val CANCEL_TRACKING_DIALOG = "CancelTracking"
 @AndroidEntryPoint
 class TrackingFragment : Fragment() {
 
@@ -73,7 +74,7 @@ class TrackingFragment : Fragment() {
                 menu?.getItem(0)?.isVisible = true
                 btnFinishRun.visibility = View.GONE
             }
-        } else {
+        } else if (currentTimeInMillis > 0L){
             binding.apply {
                 btnToggleRun.setText(R.string.start)
                 btnFinishRun.visibility = View.VISIBLE
@@ -91,6 +92,7 @@ class TrackingFragment : Fragment() {
     }
 
     private fun stopRun() {
+        tvTimer.text = "00:00:00:00"
         sendCommandService(Constant.ACTION_STOP)
         findNavController().navigate(R.id.action_trackingFragment_to_RunFragment)
     }
@@ -182,18 +184,11 @@ class TrackingFragment : Fragment() {
     }
 
     private fun showCancelTrackingDialog() {
-        val dialog = MaterialAlertDialogBuilder(requireContext())
-            .setTitle("Cancel th Run?")
-            .setMessage("Are you sure to cancel the current run and delete all its data?")
-            .setIcon(R.drawable.ic_delete)
-            .setPositiveButton(R.string.yes,{ _,_ ->
-                endRunAndSaveToDb()
-            })
-            .setNegativeButton(R.string.no, {dialogInterface,_ ->
-                dialogInterface.cancel()
-            })
-            .create()
-        dialog.show()
+        CancelTrackingDialog().apply {
+            setYesListener {
+                stopRun()
+            }
+        }.show(parentFragmentManager, CANCEL_TRACKING_DIALOG)
     }
 
 
@@ -224,6 +219,7 @@ class TrackingFragment : Fragment() {
 
     private fun endRunAndSaveToDb() {
         map?.snapshot { bmp ->
+            stopRun()
             var distanceInMeters = 0
             for (polyline in pathPoints) {
                 distanceInMeters += TrackingUtility.calcuclatePolylineLength(polyline).toInt()
@@ -238,7 +234,7 @@ class TrackingFragment : Fragment() {
                 "Run saved successfully!!",
                 Snackbar.LENGTH_LONG
             ).show()
-            stopRun()
+
         }
     }
 
@@ -258,6 +254,13 @@ class TrackingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (savedInstanceState != null) {
+            val cancelTrackingDialog = parentFragmentManager.findFragmentByTag(
+                CANCEL_TRACKING_DIALOG) as CancelTrackingDialog
+            cancelTrackingDialog.setYesListener {
+                stopRun()
+            }
+        }
         binding.btnToggleRun.setOnClickListener {
             toggleRun()
         }
