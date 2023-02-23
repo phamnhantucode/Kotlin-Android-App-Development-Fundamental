@@ -17,7 +17,7 @@ object Constant {
     const val ACTION_STOP = "ACTION_STOP"
     const val ACTION_SHOW_TRACKING_FRAGMENT = "ACTION_SHOW_TRACKING_FRAGMENT"
 
-    const val LOCATION_TRACKING_INTERVAL = 5000L
+    const val LOCATION_TRACKING_INTERVAL = 3000L
     const val FASTEST_LOCATION_TRACKING_INTERVAL = 2000L
 
 
@@ -26,5 +26,10 @@ object Constant {
     const val NOTIFICATION_ID = 1
 
     const val TIMER_UPDATE_INTERVAL = 50L
+
+    const val SHARED_PREFERENCES_NAME = "sharedPref"
+    const val KEY_FIRST_TIME_TOGGLE = "KEY_FIRST_TIME_TOGGLE"
+    const val KEY_NAME = "KEY_NAME"
+    const val KEY_WEIGHT = "KEY_WEIGHT"
 
 }

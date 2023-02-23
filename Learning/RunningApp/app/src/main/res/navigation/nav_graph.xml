@@ -39,5 +39,10 @@
     <fragment
         android:id="@+id/trackingFragment"
         android:name="com.learning.runningapp.ui.fragments.TrackingFragment"
-        android:label="TrackingFragment" />
+        android:label="TrackingFragment" >
+        <action
+            android:id="@+id/action_trackingFragment_to_RunFragment"
+            app:destination="@+id/runFragment"
+            />
+    </fragment>
 </navigation>

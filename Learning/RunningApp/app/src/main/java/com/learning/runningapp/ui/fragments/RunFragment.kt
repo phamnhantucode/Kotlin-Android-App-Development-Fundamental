@@ -7,13 +7,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewbinding.ViewBinding
 import com.learning.runningapp.R
+import com.learning.runningapp.adapters.RunAdapter
 import com.learning.runningapp.databinding.FragmentRunBinding
 import com.learning.runningapp.other.Constant
+import com.learning.runningapp.other.SortType
 import com.learning.runningapp.other.TrackingUtility
+import com.learning.runningapp.ui.MainActivity
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
@@ -33,6 +38,9 @@ class RunFragment : Fragment(), EasyPermissions.PermissionCallbacks {
     private var param2: String? = null
     private var _binding: FragmentRunBinding? = null
     val binding get() = _binding!!
+
+    private lateinit var runAdapter: RunAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -53,11 +61,43 @@ class RunFragment : Fragment(), EasyPermissions.PermissionCallbacks {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         requestPermission()
+        setUpRecyclerView()
+        (activity as MainActivity).viewModel.runsSorted.observe(viewLifecycleOwner, {
+            runAdapter.submitList(it)
+        })
         binding.apply {
             fab.setOnClickListener {
                 findNavController().navigate(RunFragmentDirections.actionRunFragmentToTrackingFragment())
             }
+            spFilter.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?,
+                    position: Int,
+                    id: Long
+                ) {
+                    val viewModel = (activity as MainActivity).viewModel
+                    when (position) {
+                        0 -> viewModel.sortRuns(SortType.DATE)
+                        1 -> viewModel.sortRuns(SortType.RUNNING_TIME)
+                        2 -> viewModel.sortRuns(SortType.DISTANCE)
+                        3 -> viewModel.sortRuns(SortType.AVG_SPEED)
+                        4 -> viewModel.sortRuns(SortType.CALORIES_BURNED)
+                    }
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+                    TODO("Not yet implemented")
+                }
+
+            }
         }
+    }
+
+    private fun setUpRecyclerView() = binding.rvRuns.apply {
+        runAdapter = RunAdapter()
+        adapter = runAdapter
+        layoutManager = LinearLayoutManager(requireContext())
     }
 
     private fun requestPermission() {
