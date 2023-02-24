@@ -23,7 +23,15 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -33,63 +41,111 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val painter = painterResource(id = R.drawable.image)
-            val description = "Description"
-            val title = "Title"
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth(0.5f)
-                    .padding(16.dp)
-            ) {
-                ImageCard(painter = painter, contentDescription = description, title = title)
-            }
+            StylingText()
         }
     }
 }
 
+//TODO: =======================================================================
+//TODO: styling text
 @Composable
-//name of composable function must upcase the first letter
-fun ImageCard(
-    painter: Painter, //to paint an image resource
-    contentDescription: String, //describe the content of image for screen reader
-    title: String, //title of an image, which will be display on the screen
-    modifier: Modifier = Modifier
-) {
-    Card( //card like a container
-        modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(15.dp), //rounded for card
-        elevation = 5.dp //make a shadow for card
+fun StylingText() {
+    val fontFamily = FontFamily(
+        Font(R.font.lexend_variable_font_wght, FontWeight.Thin),
+        Font(R.font.lexend_variable_font_wght, FontWeight.Normal),
+        Font(R.font.lexend_variable_font_wght, FontWeight.Bold),
+        Font(R.font.lexend_variable_font_wght, FontWeight.Light)
+    )
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = Color.Black)
+            .padding(10.dp)
     ) {
-        Box(modifier = Modifier.height(200.dp)) { //box make it composer stack from bottom to top
-            Image(
-                painter = painter,
-                contentDescription = contentDescription,
-                contentScale = ContentScale.Crop
-                //Scale the image
-            )
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(
-                        Brush.verticalGradient(
-                            colors = listOf(
-                                Color.Transparent,
-                                Color.Black
-                            ),
-                            startY = 300f
-                        )
+        Text(
+            text = buildAnnotatedString { //build annotatedstring, a powerful tool for special string
+                withStyle(
+                    style = SpanStyle( //span style for style a specific text
+                        color = Color.Cyan,
+                        fontSize = 50.sp
                     )
-            )
+                ) {
+                    append("H")
+                }
+                append("allo")
+            },
+            color = Color.White,
+            fontSize = 30.sp,
+            fontFamily = fontFamily,
+            fontWeight = FontWeight.Bold,
+            fontStyle = FontStyle.Italic,
+            textDecoration = TextDecoration.LineThrough
+        )
 
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(12.dp),
-                contentAlignment = Alignment.BottomStart
-            ) {
-                Text(text = title, style = TextStyle(color = Color.White), fontSize = 16.sp)
-            }
-
-        }
     }
 }
+
+
+//TODO: =======================================================================
+//TODO: make a image card in jetpack composer
+//@Composable
+//fun makeImageCard() {
+//    val painter = painterResource(id = R.drawable.image)
+//    val description = "Description"
+//    val title = "Title"
+//    Box(
+//        modifier = Modifier
+//            .fillMaxWidth(0.5f)
+//            .padding(16.dp)
+//    ) {
+//        ImageCard(painter = painter, contentDescription = description, title = title)
+//    }
+//}
+//
+//@Composable
+////name of composable function must upcase the first letter
+//fun ImageCard(
+//    painter: Painter, //to paint an image resource
+//    contentDescription: String, //describe the content of image for screen reader
+//    title: String, //title of an image, which will be display on the screen
+//    modifier: Modifier = Modifier
+//) {
+//    Card( //card like a container
+//        modifier = modifier.fillMaxWidth(),
+//        shape = RoundedCornerShape(15.dp), //rounded for card
+//        elevation = 5.dp //make a shadow for card
+//    ) {
+//        Box(modifier = Modifier.height(200.dp)) { //box make it composer stack from bottom to top
+//            Image(
+//                painter = painter,
+//                contentDescription = contentDescription,
+//                contentScale = ContentScale.Crop
+//                //Scale the image
+//            )
+//            Box(
+//                modifier = Modifier
+//                    .fillMaxSize()
+//                    .background(
+//                        Brush.verticalGradient(
+//                            colors = listOf(
+//                                Color.Transparent,
+//                                Color.Black
+//                            ),
+//                            startY = 300f
+//                        )
+//                    )
+//            )
+//
+//            Box(
+//                modifier = Modifier
+//                    .fillMaxSize()
+//                    .padding(12.dp),
+//                contentAlignment = Alignment.BottomStart
+//            ) {
+//                Text(text = title, style = TextStyle(color = Color.White), fontSize = 16.sp)
+//            }
+//
+//        }
+//    }
+//}
