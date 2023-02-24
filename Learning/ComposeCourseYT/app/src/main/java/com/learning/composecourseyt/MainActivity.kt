@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -14,6 +15,8 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -36,55 +39,90 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.learning.composecourseyt.ui.theme.ComposeCourseYTTheme
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlin.coroutines.coroutineContext
+import kotlin.random.Random
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            StylingText()
+            ColorBox(Modifier.fillMaxSize())
         }
     }
 }
 
 //TODO: =======================================================================
-//TODO: styling text
+//TODO: state
 @Composable
-fun StylingText() {
-    val fontFamily = FontFamily(
-        Font(R.font.lexend_variable_font_wght, FontWeight.Thin),
-        Font(R.font.lexend_variable_font_wght, FontWeight.Normal),
-        Font(R.font.lexend_variable_font_wght, FontWeight.Bold),
-        Font(R.font.lexend_variable_font_wght, FontWeight.Light)
-    )
+fun ColorBox(modifier: Modifier = Modifier) {
+    val color = remember { //to remember the first init instance
+        mutableStateOf(Color.Yellow)
+    }
 
     Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(color = Color.Black)
-            .padding(10.dp)
-    ) {
-        Text(
-            text = buildAnnotatedString { //build annotatedstring, a powerful tool for special string
-                withStyle(
-                    style = SpanStyle( //span style for style a specific text
-                        color = Color.Cyan,
-                        fontSize = 50.sp
-                    )
-                ) {
-                    append("H")
+        modifier = modifier
+            .background(color = color.value)
+            .clickable {
+                CoroutineScope(Dispatchers.Default).launch {
+                    repeat(100) {
+                        delay(100)
+                        color.value = Color(
+                            Random.nextFloat(),
+                            Random.nextFloat(),
+                            Random.nextFloat(),
+                            1f
+                        )
+                    }
                 }
-                append("allo")
-            },
-            color = Color.White,
-            fontSize = 30.sp,
-            fontFamily = fontFamily,
-            fontWeight = FontWeight.Bold,
-            fontStyle = FontStyle.Italic,
-            textDecoration = TextDecoration.LineThrough
-        )
+            }
+    )
 
-    }
 }
+
+
+//TODO: =======================================================================
+//TODO: styling text
+//@Composable
+//fun StylingText() {
+//    val fontFamily = FontFamily(
+//        Font(R.font.lexend_variable_font_wght, FontWeight.Thin),
+//        Font(R.font.lexend_variable_font_wght, FontWeight.Normal),
+//        Font(R.font.lexend_variable_font_wght, FontWeight.Bold),
+//        Font(R.font.lexend_variable_font_wght, FontWeight.Light)
+//    )
+//
+//    Box(
+//        modifier = Modifier
+//            .fillMaxSize()
+//            .background(color = Color.Black)
+//            .padding(10.dp)
+//    ) {
+//        Text(
+//            text = buildAnnotatedString { //build annotatedstring, a powerful tool for special string
+//                withStyle(
+//                    style = SpanStyle( //span style for style a specific text
+//                        color = Color.Cyan,
+//                        fontSize = 50.sp
+//                    )
+//                ) {
+//                    append("H")
+//                }
+//                append("allo")
+//            },
+//            color = Color.White,
+//            fontSize = 30.sp,
+//            fontFamily = fontFamily,
+//            fontWeight = FontWeight.Bold,
+//            fontStyle = FontStyle.Italic,
+//            textDecoration = TextDecoration.LineThrough
+//        )
+//
+//    }
+//}
 
 
 //TODO: =======================================================================
