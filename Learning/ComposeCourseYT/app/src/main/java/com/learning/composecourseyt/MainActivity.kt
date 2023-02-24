@@ -10,13 +10,8 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.material.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -46,43 +41,94 @@ import kotlinx.coroutines.launch
 import kotlin.coroutines.coroutineContext
 import kotlin.random.Random
 
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ColorBox(Modifier.fillMaxSize())
+
         }
     }
 }
 
+
 //TODO: =======================================================================
-//TODO: state
+//TODO: text field, button, snackBar
 @Composable
-fun ColorBox(modifier: Modifier = Modifier) {
-    val color = remember { //to remember the first init instance
-        mutableStateOf(Color.Yellow)
+fun TextFieldButtonSnackBar() {
+    val scaffoldState = rememberScaffoldState() //get default scaffold state from android
+    var textFiledState by remember { // assign textField to get and set value of mutable state
+        mutableStateOf("")
     }
-
-    Box(
-        modifier = modifier
-            .background(color = color.value)
-            .clickable {
-                CoroutineScope(Dispatchers.Default).launch {
-                    repeat(100) {
-                        delay(100)
-                        color.value = Color(
-                            Random.nextFloat(),
-                            Random.nextFloat(),
-                            Random.nextFloat(),
-                            1f
-                        )
-                    }
+    val scope = rememberCoroutineScope()
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        scaffoldState = scaffoldState
+    ) { //A scaffold is a layout which implements the basic material design layout structure. You can add things like a TopBar, BottomBar, FAB or Drawer
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 30.dp)
+        ) {
+            TextField(value = textFiledState,
+                label = {
+                    Text(text = "Enter your name")
+                },
+                onValueChange = {
+                    textFiledState = it
+                },
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(onClick = {
+                scope.launch {
+                    scaffoldState.snackbarHostState.showSnackbar("Hello $textFiledState")
                 }
+            }) {
+               Text(text = "Pls great me")
             }
-    )
-
+        }
+    }
 }
 
+
+//TODO: =======================================================================
+//TODO: state
+//var isFirstTime = true
+//@Composable
+//fun ColorBox(
+//    modifier: Modifier = Modifier,
+//    color: Color,
+//    update: (Color) -> Unit,
+//) {
+//    Box(
+//        modifier = modifier
+//            .background(color = color)
+//            .clickable {
+//                if (isFirstTime) {
+//                    CoroutineScope(Dispatchers.Default).launch {
+//                        repeat(100) {
+//                            delay(100)
+//                            update(
+//                                Color(
+//                                    Random.nextFloat(),
+//                                    Random.nextFloat(),
+//                                    Random.nextFloat(),
+//                                    1f
+//                                )
+//                            )
+//                        }
+//                    }
+//                    isFirstTime = false
+//                }
+//            }
+//    )
+//
+//}
+//
 
 //TODO: =======================================================================
 //TODO: styling text
