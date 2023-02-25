@@ -1,16 +1,27 @@
 package com.learning.composecourseyt
 
 import android.os.Bundle
+import android.widget.Space
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.AlignmentLine
+import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.constraintlayout.compose.ChainStyle
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.ConstraintSet
+import androidx.constraintlayout.compose.Dimension
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.coroutines.coroutineContext
@@ -21,26 +32,114 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            LazyyColumn()
+//            Box(
+//                modifier = Modifier
+//                    .fillMaxSize(),
+//                contentAlignment = Alignment.Center,
+//            ) {
+//                CircularProgressBar(percentage = 0.8f, number = 100, animDuration = 5000)
+//            }
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(androidx.compose.ui.graphics.Color.Black)
+            ) {
+                Row(
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .border(
+                            1.dp,
+                            androidx.compose.ui.graphics.Color.Green,
+                            RoundedCornerShape(10.dp)
+                        )
+                        .padding(30.dp)
+                ) {
+                    var volume by remember {
+                        mutableStateOf(0f)
+                    }
+                    val barCount = 20
+                    MusicKnob(
+                        modifier = Modifier.size(100.dp)
+                    ) {
+                        volume = it
+                    }
+                    Spacer(modifier = Modifier.size(20.dp))
+                    VolumeBar(
+                        modifier = Modifier.fillMaxWidth()
+                            .height(30.dp),
+                        activeBars = (barCount * volume).toInt(),
+                        barCount = barCount
+                    )
+                }
+            }
         }
     }
 }
 
 //TODO: =======================================================================
-//TODO: lazy column
-@Composable
-fun LazyyColumn() {
-    LazyColumn { //Create a list a column lazy
-        items(1000) { //prefer use itemsIndexed
-            Text(text = "item $it",
-                modifier = Modifier
-                    .fillMaxWidth().padding(0.dp),
-                fontSize = 20.sp
-            )
-        }
-    }
+//TODO: constraint layout
+//@Composable
+//fun makeConstraintLayout() {
+//    val constraintSet = ConstraintSet { //create a constraint set
+//        val redBox = createRefFor("redBox")
+//        val greenBox = createRefFor("greenBox")
+//        val guideLine1 = createGuidelineFromStart(0.5f) //just create an abstract line for align the item
+//        val guideLine2 = createGuidelineFromTop(0.5f)
+//        constrain(redBox) {
+//            top.linkTo(parent.top)
+//            start.linkTo(parent.start)
+//            width = Dimension.value(100.dp)
+//            height = Dimension.value(100.dp)
+//        }
+//
+//        constrain(greenBox) {
+//            centerAround(guideLine1)
+//            centerAround(guideLine2) //
+//            width = Dimension.value(100.dp)
+//            height = Dimension.value(100.dp)
+//        }
+//
+////        createVerticalChain(redBox, greenBox, chainStyle = ChainStyle.Spread) // chain make an relative position for items in layout and it very strong
+//    }
+//
+//    ConstraintLayout(
+//        constraintSet = constraintSet,
+//        modifier = Modifier
+//            .fillMaxSize()
+//    ) {
+//        Box(
+//            modifier = Modifier
+//                .background(androidx.compose.ui.graphics.Color.Red)
+//                .width(300.dp) //we set it constraint so we cannot modify width again in here
+//                .layoutId("redBox"),
+//
+//        )
+//        Box(
+//            modifier = Modifier
+//                .background(androidx.compose.ui.graphics.Color.Green)
+//                .layoutId("greenBox")
+//        ) {
+//        }
+//    }
+//}
 
-}
+//TODO: =======================================================================
+//TODO: lazy column
+//@Composable
+//fun LazyyColumn() {
+//    LazyColumn { //Create a list a column lazy
+//        items(1000) { //prefer use itemsIndexed
+//            Text(text = "item $it",
+//                modifier = Modifier
+//                    .fillMaxWidth().padding(0.dp),
+//                fontSize = 20.sp
+//            )
+//        }
+//    }
+//
+//}
 
 //TODO: =======================================================================
 //TODO: text field, button, snackBar
