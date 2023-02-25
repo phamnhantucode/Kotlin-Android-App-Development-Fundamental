@@ -1,41 +1,16 @@
 package com.learning.composecourseyt
 
-import android.icu.text.CaseMap.Title
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.*
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.Text
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.text.withStyle
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.learning.composecourseyt.ui.theme.ComposeCourseYTTheme
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.coroutines.coroutineContext
@@ -46,53 +21,68 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
+            LazyyColumn()
         }
     }
 }
 
+//TODO: =======================================================================
+//TODO: lazy column
+@Composable
+fun LazyyColumn() {
+    LazyColumn { //Create a list a column lazy
+        items(1000) { //prefer use itemsIndexed
+            Text(text = "item $it",
+                modifier = Modifier
+                    .fillMaxWidth().padding(0.dp),
+                fontSize = 20.sp
+            )
+        }
+    }
+
+}
 
 //TODO: =======================================================================
 //TODO: text field, button, snackBar
-@Composable
-fun TextFieldButtonSnackBar() {
-    val scaffoldState = rememberScaffoldState() //get default scaffold state from android
-    var textFiledState by remember { // assign textField to get and set value of mutable state
-        mutableStateOf("")
-    }
-    val scope = rememberCoroutineScope()
-    Scaffold(
-        modifier = Modifier.fillMaxSize(),
-        scaffoldState = scaffoldState
-    ) { //A scaffold is a layout which implements the basic material design layout structure. You can add things like a TopBar, BottomBar, FAB or Drawer
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center,
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(horizontal = 30.dp)
-        ) {
-            TextField(value = textFiledState,
-                label = {
-                    Text(text = "Enter your name")
-                },
-                onValueChange = {
-                    textFiledState = it
-                },
-                singleLine = true,
-                modifier = Modifier.fillMaxWidth()
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(onClick = {
-                scope.launch {
-                    scaffoldState.snackbarHostState.showSnackbar("Hello $textFiledState")
-                }
-            }) {
-               Text(text = "Pls great me")
-            }
-        }
-    }
-}
+//@Composable
+//fun TextFieldButtonSnackBar() {
+//    val scaffoldState = rememberScaffoldState() //get default scaffold state from android
+//    var textFiledState by remember { // assign textField to get and set value of mutable state
+//        mutableStateOf("")
+//    }
+//    val scope = rememberCoroutineScope()
+//    Scaffold(
+//        modifier = Modifier.fillMaxSize(),
+//        scaffoldState = scaffoldState
+//    ) { //A scaffold is a layout which implements the basic material design layout structure. You can add things like a TopBar, BottomBar, FAB or Drawer
+//        Column(
+//            horizontalAlignment = Alignment.CenterHorizontally,
+//            verticalArrangement = Arrangement.Center,
+//            modifier = Modifier
+//                .fillMaxSize()
+//                .padding(horizontal = 30.dp)
+//        ) {
+//            OutlinedTextField(value = textFiledState,
+//                label = {
+//                    Text(text = "Enter your name")
+//                },
+//                onValueChange = {
+//                    textFiledState = it
+//                },
+//                singleLine = true,
+//                modifier = Modifier.fillMaxWidth()
+//            )
+//            Spacer(modifier = Modifier.height(16.dp))
+//            Button(onClick = {
+//                scope.launch {
+//                    scaffoldState.snackbarHostState.showSnackbar("Hello $textFiledState")
+//                }
+//            }) {
+//               Text(text = "Pls great me")
+//            }
+//        }
+//    }
+//}
 
 
 //TODO: =======================================================================
