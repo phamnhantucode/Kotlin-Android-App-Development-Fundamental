@@ -22,6 +22,7 @@ import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.ConstraintSet
 import androidx.constraintlayout.compose.Dimension
+import com.plcoding.meditationuiyoutube.ui.theme.MeditationUIYouTubeTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.coroutines.coroutineContext
@@ -32,6 +33,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            MeditationUIYouTubeTheme(darkTheme = false) {
+                HomeScreen()
+            }
+        }
 //            Box(
 //                modifier = Modifier
 //                    .fillMaxSize(),
@@ -39,42 +44,47 @@ class MainActivity : ComponentActivity() {
 //            ) {
 //                CircularProgressBar(percentage = 0.8f, number = 100, animDuration = 5000)
 //            }
-            Box(
-                contentAlignment = Alignment.Center,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(androidx.compose.ui.graphics.Color.Black)
-            ) {
-                Row(
-                    horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier
-                        .border(
-                            1.dp,
-                            androidx.compose.ui.graphics.Color.Green,
-                            RoundedCornerShape(10.dp)
-                        )
-                        .padding(30.dp)
-                ) {
-                    var volume by remember {
-                        mutableStateOf(0f)
-                    }
-                    val barCount = 20
-                    MusicKnob(
-                        modifier = Modifier.size(100.dp)
-                    ) {
-                        volume = it
-                    }
-                    Spacer(modifier = Modifier.size(20.dp))
-                    VolumeBar(
-                        modifier = Modifier.fillMaxWidth()
-                            .height(30.dp),
-                        activeBars = (barCount * volume).toInt(),
-                        barCount = barCount
-                    )
-                }
-            }
-        }
+
+
+
+//            TODO:================================================================
+//            TODO: music knob ui
+//            Box(
+//                contentAlignment = Alignment.Center,
+//                modifier = Modifier
+//                    .fillMaxSize()
+//                    .background(androidx.compose.ui.graphics.Color.Black)
+//            ) {
+//                Row(
+//                    horizontalArrangement = Arrangement.Center,
+//                    verticalAlignment = Alignment.CenterVertically,
+//                    modifier = Modifier
+//                        .border(
+//                            1.dp,
+//                            androidx.compose.ui.graphics.Color.Green,
+//                            RoundedCornerShape(10.dp)
+//                        )
+//                        .padding(30.dp)
+//                ) {
+//                    var volume by remember {
+//                        mutableStateOf(0f)
+//                    }
+//                    val barCount = 20
+//                    MusicKnob(
+//                        modifier = Modifier.size(100.dp)
+//                    ) {
+//                        volume = it
+//                    }
+//                    Spacer(modifier = Modifier.size(20.dp))
+//                    VolumeBar(
+//                        modifier = Modifier.fillMaxWidth()
+//                            .height(30.dp),
+//                        activeBars = (barCount * volume).toInt(),
+//                        barCount = barCount
+//                    )
+//                }
+//            }
+//        }
     }
 }
 

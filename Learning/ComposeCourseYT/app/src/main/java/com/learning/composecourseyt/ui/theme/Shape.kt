@@ -1,4 +1,4 @@
-package com.learning.composecourseyt.ui.theme
+package com.plcoding.meditationuiyoutube.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
