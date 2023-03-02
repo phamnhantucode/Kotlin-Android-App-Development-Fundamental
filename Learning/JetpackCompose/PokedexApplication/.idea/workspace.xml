@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed61860a-b3bb-4b8c-9596-5836f1cd0a19" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ComposeCourseYT/app/src/main/java/com/learning/composecourseyt/DropDown.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ComposeCourseYT/app/src/main/java/com/learning/composecourseyt/TimerUI.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/PokedexApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Ability.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/AbilityX.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Animated.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/BlackWhite.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Crystal.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/DiamondPearl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/DreamWorld.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Emerald.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/FireredLeafgreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Form.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/GameIndice.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/GenerationI.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/GenerationIi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/GenerationIii.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/GenerationIv.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/GenerationV.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/GenerationVi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/GenerationVii.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/GenerationViii.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Gold.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/HeartgoldSoulsilver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Home.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Icons.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Move.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/MoveLearnMethod.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/MoveX.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/OfficialArtwork.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/OmegarubyAlphasapphire.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Other.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Platinum.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Pokemon.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/PokemonList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/RedBlue.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Result.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/RubySapphire.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Silver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Species.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Sprites.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Stat.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/StatX.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Type.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/TypeX.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/UltraSunUltraMoon.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Version.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/VersionGroup.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/VersionGroupDetail.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Versions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/XY.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/data/remote/responses/Yellow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/di/AppModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/repository/PokemonRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/ui/theme/Color.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/ui/theme/Shape.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/ui/theme/Theme.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/ui/theme/Type.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/util/Constants.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/java/com/learning/pokedexapp/util/Resource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/res/drawable-v24/ic_height.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/res/drawable-v24/ic_international_pok_mon_logo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/res/drawable-v24/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokedexApp/app/src/main/res/drawable-v24/ic_weight.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CalculatorApp.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComposeCourseYT/app/src/main/java/com/learning/composecourseyt/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComposeCourseYT/app/src/main/java/com/learning/composecourseyt/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComposeCourseYT/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComposeCourseYT/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CoroutinesAndroid/app/src/main/java/com/learning/coroutinesandroid/firstexample/FirstExample.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CoroutinesAndroid/app/src/main/java/com/learning/coroutinesandroid/firstexample/FirstExample.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RxAndroidTutorial/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RxAndroidTutorial/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RxAndroidTutorial/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../RxAndroidTutorial/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/java/com/learning/rxandroidtutorial/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/java/com/learning/rxandroidtutorial/ApiService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/java/com/learning/rxandroidtutorial/Data.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/java/com/learning/rxandroidtutorial/Data.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/java/com/learning/rxandroidtutorial/DataAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/java/com/learning/rxandroidtutorial/DataAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/java/com/learning/rxandroidtutorial/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/java/com/learning/rxandroidtutorial/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/res/layout/item_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/res/layout/item_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RxAndroidTutorial/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TipTime/app/src/main/java/com/learning/tiptime/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TipTime/app/src/main/java/com/learning/tiptime/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WorkManagerGuide/app/src/main/java/com/learning/workmanagerguide/ColorFilterWorker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../WorkManagerGuide/app/src/main/java/com/learning/workmanagerguide/ColorFilterWorker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WorkManagerGuide/app/src/main/java/com/learning/workmanagerguide/DownloadApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../WorkManagerGuide/app/src/main/java/com/learning/workmanagerguide/DownloadApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WorkManagerGuide/app/src/main/java/com/learning/workmanagerguide/DownloadWorker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../WorkManagerGuide/app/src/main/java/com/learning/workmanagerguide/DownloadWorker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WorkManagerGuide/app/src/main/java/com/learning/workmanagerguide/ImageApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../WorkManagerGuide/app/src/main/java/com/learning/workmanagerguide/ImageApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WorkManagerGuide/app/src/main/java/com/learning/workmanagerguide/WorkerParams.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../WorkManagerGuide/app/src/main/java/com/learning/workmanagerguide/WorkerParams.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../android-basics-kotlin-cupcake-app-starter/app/src/main/java/com/example/cupcake/model/OrderViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../android-basics-kotlin-cupcake-app-starter/app/src/main/java/com/example/cupcake/model/OrderViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../android-basics-kotlin-inventory-app-starter/app/src/main/java/com/example/inventory/AddItemFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../android-basics-kotlin-inventory-app-starter/app/src/main/java/com/example/inventory/AddItemFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../android-basics-kotlin-inventory-app-starter/app/src/main/java/com/example/inventory/InventoryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../android-basics-kotlin-inventory-app-starter/app/src/main/java/com/example/inventory/InventoryViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../android-basics-kotlin-inventory-app-starter/app/src/main/java/com/example/inventory/ItemDetailFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../android-basics-kotlin-inventory-app-starter/app/src/main/java/com/example/inventory/ItemDetailFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../android-basics-kotlin-inventory-app-starter/app/src/main/java/com/example/inventory/data/ItemRoomDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../android-basics-kotlin-inventory-app-starter/app/src/main/java/com/example/inventory/data/ItemRoomDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../android-workmanager-start_kotlin/app/src/main/java/com/example/background/workers/BlurWorker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../android-workmanager-start_kotlin/app/src/main/java/com/example/background/workers/BlurWorker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LoginRegisterApp/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LoginRegisterApp/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/java/com/example/loginregisterapp/Login.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/java/com/example/loginregisterapp/Login.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/java/com/example/loginregisterapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/java/com/example/loginregisterapp/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/java/com/example/loginregisterapp/Register.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/java/com/example/loginregisterapp/Register.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LoginRegisterApp/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MKMMNGEaHBfd2S94cbCQavF1mv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/learning/pokedexapplication" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Workspace\Android\Learning\JetpackCompose\PokedexApplication\app\src\main\java\com\learning\pokedexapplication" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="PokedexApplication.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed61860a-b3bb-4b8c-9596-5836f1cd0a19" name="Changes" comment="" />
+      <created>1677511772063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677511772063</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
