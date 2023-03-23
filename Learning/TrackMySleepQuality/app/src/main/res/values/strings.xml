@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TrackMySleepQuality</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="zero_very_bad">Very bad</string>
+    <string name="one_poor">Poor</string>
+    <string name="two_soso">Soso</string>
+    <string name="four_pretty_good">Pretty good</string>
+    <string name="five_excellent">Five excellent</string>
+    <string name="three_ok">Ok</string>
+</resources>
